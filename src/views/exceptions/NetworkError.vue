@@ -31,9 +31,9 @@ tryOnUnmounted(() => {
 </script>
 
 <template>
-  <a-result title="Network Error" sub-title="网络连接失败，请稍后重试">
+  <a-result title="Network Error" sub-title="网络连接失败，请稍后重试" class="px-0!">
     <template #icon>
-      <img :src="networkErrorImg" alt="500.png">
+      <img width="300" height="168" :src="networkErrorImg" alt="500.png">
     </template>
     <template #extra>
       <a-button key="refresh" type="primary" @click="handleRefresh">刷新页面</a-button>
