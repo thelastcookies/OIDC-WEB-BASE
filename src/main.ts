@@ -1,0 +1,32 @@
+import { createApp } from 'vue';
+import App from './App.vue';
+import { handleOidcCallback } from '@/utils/oidc';
+
+// 全局样式表
+import '@/assets/style/index.less';
+
+// Pinia
+import { createPinia } from 'pinia';
+
+// router
+import router from '@/router';
+import '@/router/guards.ts';
+
+// UnoCSS
+import 'virtual:uno.css';
+
+/**
+ * 应用初始化
+ * 在 Vue 应用挂载前处理 OIDC 回调
+ */
+const start = async () => {
+  const callbackHandled = await handleOidcCallback();
+  if (callbackHandled) return;
+
+  const app = createApp(App);
+  app.use(createPinia());
+  app.use(router);
+  app.mount('#app');
+};
+
+start();

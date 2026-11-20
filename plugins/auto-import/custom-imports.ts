@@ -1,0 +1,33 @@
+import type { ImportsMap } from 'unplugin-auto-import/types';
+
+/**
+ * 自定义自动导入
+ * ```
+ * '[package-name]': [
+ *     '[import-names]',
+ *     // alias
+ *     ['[from]', '[alias]'],
+ * ]
+ * ```
+ */
+export const customImports: ImportsMap = {
+  'axios': [
+    // default imports
+    ['default', 'axios'], // alias imports: import { default as axios } from 'axios',
+  ],
+  'lodash-es': [
+    'cloneDeep',
+    'merge',
+    'isArray',
+  ],
+  'mitt': [
+    ['default', 'mitt'],
+  ],
+  'ant-design-vue': [
+    'App',
+    'legacyLogicalPropertiesTransformer',
+    'theme',
+    'message',
+    'notification',
+  ],
+};
