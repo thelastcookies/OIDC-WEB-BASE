@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/thelastcookies/OIDC-WEB-BASE/compare/v0.1.1...v0.2.0) (2026-11-23)
+
+
+### Features
+
+* 更新版权功能，引入 BaseIcon，移除多余组件 ([6c470c2](https://github.com/thelastcookies/OIDC-WEB-BASE/commit/6c470c237f4ee48d213a188f9b02990bd00ec18e))
+
 ## [0.1.1](https://github.com/thelastcookies/OIDC-WEB-BASE/compare/v0.1.0...v0.1.1) (2026-11-20)
 
 
