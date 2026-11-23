@@ -5,7 +5,9 @@ const version = __APP_VERSION__;
 </script>
 
 <template>
-  <div class="absolute w-full text-center p-2! bottom-0">
-    <span class="text-sm text-gray-400">v{{ version }} · Copyright © {{ year }} {{ author }}. All rights reserved.</span>
+  <div class="absolute bottom-0 w-full p-2 flex flex-col gap-0.5 text-center text-12px text-gray-400">
+    <div>v{{ version }}</div>
+    <div>Copyright © {{ year }} {{ author }}.</div>
+    <div>All rights reserved.</div>
   </div>
 </template>

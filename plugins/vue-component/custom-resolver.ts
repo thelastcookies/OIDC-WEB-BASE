@@ -3,8 +3,8 @@ import type { ComponentResolver, ComponentResolveResult } from 'unplugin-vue-com
 export const customResolver: ComponentResolver = {
   type: 'component',
   resolve: (name: string): ComponentResolveResult => {
-    if (name == 'VueDraggable') {
-      return { name, from: 'vue-draggable-plus' };
+    if (name == 'BaseIcon') {
+      return { name, from: '@thelastcookies/base-icon' };
     }
   },
 };

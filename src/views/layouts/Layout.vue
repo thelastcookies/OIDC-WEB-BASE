@@ -32,6 +32,7 @@ watch(actionTree, (tree: TreeNode<ActionRecordRaw>[]) => {
         v-if="deviceType === 'desktop' && layoutMode.includes('MENU') && menu.length"
         width="220" breakpoint="xl" collapsed-width="50">
         <SidebarMenu :menu="menu"></SidebarMenu>
+        <Copyright />
       </a-layout-sider>
       <a-layout>
         <Tabs v-if="deviceType === 'desktop' && layoutMode.includes('TAB')"></Tabs>
@@ -50,6 +51,5 @@ watch(actionTree, (tree: TreeNode<ActionRecordRaw>[]) => {
     <a-layout-footer v-if="deviceType === 'mobile'" class="!p-0">
       <FooterMenu :menu="menu"></FooterMenu>
     </a-layout-footer>
-    <Copyright />
   </a-layout>
 </template>
